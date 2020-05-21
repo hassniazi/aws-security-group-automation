@@ -1,0 +1,494 @@
+RULE ID,SECURITY GROUP NAME,FROM PORT,TO PORT,PROTOCOL,TO SECURITY GROUP,FROM TYPE,DESCRIPTION,DIRECTION,Notes
+1,AppD_RHEL_Instances,53,53,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+2,AppD_RHEL_Instances,88,88,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+3,AppD_RHEL_Instances,135,135,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+4,AppD_RHEL_Instances,389,389,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+5,AppD_RHEL_Instances,445,445,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+6,AppD_RHEL_Instances,464,464,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+7,AppD_RHEL_Instances,636,636,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+8,AppD_RHEL_Instances,1024,65535,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+9,AppD_RHEL_Instances,3268,3269,tcp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+10,AppD_RHEL_Instances,53,53,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+11,AppD_RHEL_Instances,88,88,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+12,AppD_RHEL_Instances,123,123,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+13,AppD_RHEL_Instances,138,138,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+14,AppD_RHEL_Instances,389,389,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+15,AppD_RHEL_Instances,445,445,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+16,AppD_RHEL_Instances,464,464,udp,Active Directory,Group,AppD_RHEL_Instances to Active Directory,Traversal,
+17,AppD_RHEL_Instances,4122,4122,tcp,Mgt_Trend,Group,AppD_RHEL_Instances to Mgt_Trend,Traversal,
+18,AppD_RHEL_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,AppD_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+19,Mgt_ToolingALB-06,80,80,tcp,Mgt_AWX,Group,Mgt_ToolingALB-06 to Mgt_AWX,Traversal,
+20,AppD_RHEL_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,AppD_RHEL_Instances to Mgt_EnterpriseALB-05,Traversal,
+21,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_PrivacyIdea,Group,Mgt_EnterpriseALB-05 to Mgt_PrivacyIdea,Traversal,
+22,AppD_RHEL_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,AppD_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+23,AppD_RHEL_Instances,443,443,tcp,AppD_Private_Link,Group,AppD_RHEL_Instances to AppD_Private_Link,Traversal,
+24,AppD_Windows_Instances,53,53,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+25,AppD_Windows_Instances,88,88,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+26,AppD_Windows_Instances,135,135,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+27,AppD_Windows_Instances,389,389,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+28,AppD_Windows_Instances,445,445,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+29,AppD_Windows_Instances,464,464,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+30,AppD_Windows_Instances,636,636,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+31,AppD_Windows_Instances,1024,65535,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+32,AppD_Windows_Instances,3268,3269,tcp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+33,AppD_Windows_Instances,53,53,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+34,AppD_Windows_Instances,88,88,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+35,AppD_Windows_Instances,123,123,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+36,AppD_Windows_Instances,138,138,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+37,AppD_Windows_Instances,389,389,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+38,AppD_Windows_Instances,445,445,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+39,AppD_Windows_Instances,464,464,udp,Active Directory,Group,AppD_Windows_Instances to Active Directory,Traversal,
+40,AppD_Windows_Instances,4122,4122,tcp,Mgt_Trend,Group,AppD_Windows_Instances to Mgt_Trend,Traversal,
+41,AppD_Windows_Instances,443,443,tcp,AppD_Private_Link,Group,AppD_Windows_Instances to AppD_Private_Link,Traversal,
+42,AppD_Windows_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,AppD_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+43,AppD_Windows_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,AppD_Windows_Instances to Mgt_EnterpriseALB-05,Traversal,
+44,AppD_Windows_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,AppD_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+45,AppD_Windows_Instances,443,443,tcp,AppD_Private_Link,Group,AppD_Windows_Instances to AppD_Private_Link,Traversal,
+46,APPDATATemp,53,53,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+47,APPDATATemp,88,88,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+48,APPDATATemp,135,135,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+49,APPDATATemp,389,389,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+50,APPDATATemp,445,445,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+51,APPDATATemp,464,464,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+52,APPDATATemp,636,636,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+53,APPDATATemp,1024,65535,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+54,APPDATATemp,3268,3269,tcp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+55,APPDATATemp,53,53,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+56,APPDATATemp,88,88,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+57,APPDATATemp,123,123,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+58,APPDATATemp,138,138,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+59,APPDATATemp,389,389,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+60,APPDATATemp,445,445,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+61,APPDATATemp,464,464,udp,Active Directory,Group,APPDATATemp to Active Directory,Traversal,
+62,APPDATATemp,4122,4122,tcp,Mgt_Trend,Group,APPDATATemp to Mgt_Trend,Traversal,
+63,APPDATATemp,443,443,tcp,AppD_Private_Link,Group,APPDATATemp to AppD_Private_Link,Traversal,
+64,APPDATATemp,80,80,tcp,Mgt_ToolingALB-06,Group,APPDATATemp to Mgt_ToolingALB-06,Traversal,
+65,APPDATATemp,443,443,tcp,Mgt_EnterpriseALB-05,Group,APPDATATemp to Mgt_EnterpriseALB-05,Traversal,
+66,APPDATATemp,8081,8081,tcp,Mgt_ToolingALB-06,Group,APPDATATemp to Mgt_ToolingALB-06,Traversal,
+68,DMZTemp,53,53,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+69,DMZTemp,88,88,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+70,DMZTemp,135,135,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+71,DMZTemp,389,389,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+72,DMZTemp,445,445,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+73,DMZTemp,464,464,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+74,DMZTemp,636,636,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+75,DMZTemp,1024,65535,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+76,DMZTemp,3268,3269,tcp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+77,DMZTemp,53,53,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+78,DMZTemp,88,88,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+79,DMZTemp,123,123,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+80,DMZTemp,138,138,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+81,DMZTemp,389,389,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+82,DMZTemp,445,445,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+83,DMZTemp,464,464,udp,Active Directory,Group,DMZTemp to Active Directory,Traversal,
+84,DMZTemp,4122,4122,tcp,Mgt_Trend,Group,DMZTemp to Mgt_Trend,Traversal,
+85,DMZTemp,443,443,tcp,dmz_Private_Link,Group,DMZTemp to dmz_Private_Link,Traversal,
+86,DMZTemp,80,80,tcp,Mgt_ToolingALB-06,Group,DMZTemp to Mgt_ToolingALB-06,Traversal,
+87,DMZTemp,443,443,tcp,Mgt_EnterpriseALB-05,Group,DMZTemp to Mgt_EnterpriseALB-05,Traversal,
+88,DMZTemp,8081,8081,tcp,Mgt_ToolingALB-06,Group,DMZTemp to Mgt_ToolingALB-06,Traversal,
+89,MGMTTemp,53,53,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+90,MGMTTemp,88,88,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+91,MGMTTemp,135,135,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+92,MGMTTemp,389,389,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+93,MGMTTemp,445,445,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+94,MGMTTemp,464,464,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+95,MGMTTemp,636,636,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+96,MGMTTemp,1024,65535,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+97,MGMTTemp,3268,3269,tcp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+98,MGMTTemp,53,53,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+99,MGMTTemp,88,88,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+100,MGMTTemp,123,123,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+101,MGMTTemp,138,138,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+102,MGMTTemp,389,389,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+103,MGMTTemp,445,445,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+104,MGMTTemp,464,464,udp,Active Directory,Group,MGMTTemp to Active Directory,Traversal,
+105,MGMTTemp,4122,4122,tcp,Mgt_Trend,Group,MGMTTemp to Mgt_Trend,Traversal,
+106,MGMTTemp,443,443,tcp,Mgt_Private_Link,Group,MGMTTemp to Mgt_Private_Link,Traversal,
+107,MGMTTemp,80,80,tcp,Mgt_ToolingALB-06,Group,MGMTTemp to Mgt_ToolingALB-06,Traversal,
+108,MGMTTemp,443,443,tcp,Mgt_EnterpriseALB-05,Group,MGMTTemp to Mgt_EnterpriseALB-05,Traversal,
+109,MGMTTemp,8081,8081,tcp,Mgt_ToolingALB-06,Group,MGMTTemp to Mgt_ToolingALB-06,Traversal,
+110,Mgt_AWX,5432,5432,tcp,Mgt_PostgreSQL,Group,Mgt_AWX to Mgt_PostgreSQL,Traversal,
+111,Mgt_AWX,22,22,tcp,MGMTTemp,Group,Mgt_AWX to MGMTTemp,Traversal,
+112,Mgt_AWX,22,22,tcp,APPDATATemp,Group,Mgt_AWX to APPDATATemp,Traversal,
+113,Mgt_AWX,22,22,tcp,DMZTemp,Group,Mgt_AWX to DMZTemp,Traversal,
+114,Mgt_AWX,5985,5986,tcp,MGMTTemp,Group,Mgt_AWX to MGMTTemp,Traversal,
+115,Mgt_AWX,5985,5986,tcp,APPDATATemp,Group,Mgt_AWX to APPDATATemp,Traversal,
+116,Mgt_AWX,5985,5986,tcp,DMZTemp,Group,Mgt_AWX to DMZTemp,Traversal,
+117,Mgt_AWX,22,22,tcp,Mgt_RHEL_Instances,Group,Mgt_AWX to Mgt_RHEL_Instances,Traversal,
+118,Mgt_AWX,5985,5986,tcp,Mgt_Windows_Instances,Group,Mgt_AWX to Mgt_Windows_Instances,Traversal,
+119,Mgt_AWX,22,22,tcp,dmz_RHEL_Instances,Group,Mgt_AWX to dmz_RHEL_Instances,Traversal,
+120,Mgt_AWX,5985,5986,tcp,dmz_Windows_Instances,Group,Mgt_AWX to dmz_Windows_Instances,Traversal,
+121,Mgt_AWX,22,22,tcp,AppD_RHEL_Instances,Group,Mgt_AWX to AppD_RHEL_Instances,Traversal,
+122,Mgt_AWX,5985,5986,tcp,AppD_Windows_Instances,Group,Mgt_AWX to AppD_Windows_Instances,Traversal,
+123,Mgt_C2SVPN,443,443,tcp,Mgt_BndrySvcALB-16,Group,Mgt_C2SVPN to Mgt_BndrySvcALB-16,Ingress,
+124,Mgt_C2SVPN,22,22,tcp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Ingress,
+125,Mgt_C2SVPN,22,22,tcp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Ingress,
+126,Mgt_C2SVPN,22,22,tcp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Ingress,
+127,Mgt_C2SVPN,5985,5985,tcp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Ingress,
+128,Mgt_C2SVPN,5985,5985,tcp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Ingress,
+129,Mgt_C2SVPN,5985,5985,tcp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Ingress,
+130,Mgt_C2SVPN,5986,5986,tcp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Ingress,
+131,Mgt_C2SVPN,5986,5986,tcp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Ingress,
+132,Mgt_C2SVPN,5986,5986,tcp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Ingress,
+133,Mgt_C2SVPN,443,443,tcp,Mgt_BndrySvcALB-07,Group,Mgt_C2SVPN to Mgt_BndrySvcALB-07,Ingress,
+134,Mgt_BndrySvcALB-07,443,443,tcp,Mgt_RevProxy,Group,Mgt_BndrySvcALB-07 to Mgt_RevProxy,Ingress,
+135,Mgt_BndrySvcALB-07,80,80,tcp,Mgt_RevProxy,Group,Mgt_BndrySvcALB-07 to Mgt_RevProxy,Ingress,
+136,Mgt_C2SVPN,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_C2SVPN to Mgt_ToolingALB-06,Ingress,
+137,Mgt_BndrySvcALB-07,8081,8081,tcp,Mgt_RevProxy,Group,Mgt_BndrySvcALB-07 to Mgt_RevProxy,Ingress,
+138,Mgt_C2SVPN,53,53,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+139,Mgt_C2SVPN,88,88,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+140,Mgt_C2SVPN,135,135,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+141,Mgt_C2SVPN,389,389,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+142,Mgt_C2SVPN,445,445,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+143,Mgt_C2SVPN,464,464,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+144,Mgt_C2SVPN,636,636,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+145,Mgt_C2SVPN,1024,65535,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+146,Mgt_C2SVPN,3268,3269,tcp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+147,Mgt_C2SVPN,53,53,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+148,Mgt_C2SVPN,88,88,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+149,Mgt_C2SVPN,123,123,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+150,Mgt_C2SVPN,138,138,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+151,Mgt_C2SVPN,389,389,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+152,Mgt_C2SVPN,445,445,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+153,Mgt_C2SVPN,464,464,udp,Active Directory,Group,Mgt_C2SVPN to Active Directory,Traversal,
+154,Mgt_S2SVPN,443,443,tcp,Mgt_BndrySvcALB-16,Group,Mgt_S2SVPN to Mgt_BndrySvcALB-16,Ingress,
+155,Mgt_S2SVPN,22,22,tcp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Ingress,
+156,Mgt_S2SVPN,22,22,tcp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Ingress,
+157,Mgt_S2SVPN,22,22,tcp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Ingress,
+158,Mgt_S2SVPN,5985,5985,tcp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Ingress,
+159,Mgt_S2SVPN,5985,5985,tcp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Ingress,
+160,Mgt_S2SVPN,5985,5985,tcp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Ingress,
+161,Mgt_S2SVPN,5986,5986,tcp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Ingress,
+162,Mgt_S2SVPN,5986,5986,tcp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Ingress,
+163,Mgt_S2SVPN,5986,5986,tcp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Ingress,
+164,Mgt_S2SVPN,443,443,tcp,Mgt_BndrySvcALB-07,Group,Mgt_S2SVPN to Mgt_BndrySvcALB-07,Ingress,
+165,Mgt_S2SVPN,80,80,tcp,Mgt_BndrySvcALB-07,Group,Mgt_S2SVPN to Mgt_BndrySvcALB-07,Ingress,
+166,Mgt_S2SVPN,8081,8081,tcp,Mgt_BndrySvcALB-07,Group,Mgt_S2SVPN to Mgt_BndrySvcALB-07,Ingress,
+170,Mgt_S2SVPN,389,389,tcp,Active Directory,Group,Mgt_S2SVPN to Active Directory,Traversal,
+183,Mgt_ESearch,9200,9400,tcp,Mgt_ESearch,Group,Mgt_ESearch to Mgt_ESearch,Ingress,
+184,Mgt_ESearch,9200,9400,tcp,Mgt_Kibana,Group,Mgt_ESearch to Mgt_Kibana,Ingress,
+185,Mgt_JumpSvr,22,22,tcp,AppD_RHEL_Instances,Group,Mgt_JumpSvr to AppD_RHEL_Instances,Traversal,
+186,Mgt_JumpSvr,22,22,tcp,APPDATATemp,Group,Mgt_JumpSvr to APPDATATemp,Traversal,
+187,Mgt_JumpSvr,22,22,tcp,DMZTemp,Group,Mgt_JumpSvr to DMZTemp,Traversal,
+188,Mgt_JumpSvr,22,22,tcp,MGMTTemp,Group,Mgt_JumpSvr to MGMTTemp,Traversal,
+189,Mgt_JumpSvr,22,22,tcp,Mgt_RHEL_Instances,Group,Mgt_JumpSvr to Mgt_RHEL_Instances,Traversal,
+190,Mgt_JumpSvr,22,22,tcp,dmz_RHEL_Instances,Group,Mgt_JumpSvr to dmz_RHEL_Instances,Traversal,
+191,Mgt_JumpSvr,22,22,tcp,MGMTTemp,Group,Mgt_JumpSvr to MGMTTemp,Traversal,
+192,Mgt_JumpSvr,22,22,tcp,APPDATATemp,Group,Mgt_JumpSvr to APPDATATemp,Traversal,
+193,Mgt_JumpSvr,22,22,tcp,DMZTemp,Group,Mgt_JumpSvr to DMZTemp,Traversal,
+194,Mgt_Logstash,9200,9400,tcp,Mgt_ESearch,Group,Mgt_Logstash to Mgt_ESearch,Ingress,
+195,Mgt_PrivacyIdea,3306,3306,tcp,Mgt_MySQL,Group,Mgt_PrivacyIdea to Mgt_MySQL,Ingress,
+196,Mgt_RDGW,5985,5985,tcp,Mgt_RDLic,Group,Mgt_RDGW to Mgt_RDLic,Ingress,
+197,Mgt_RDGW,5986,5986,tcp,Mgt_RDLic,Group,Mgt_RDGW to Mgt_RDLic,Ingress,
+198,Mgt_RDGW,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Ingress,
+199,Mgt_RDGW,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Ingress,
+200,Mgt_RDGW,5985,5985,tcp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Traversal,
+201,Mgt_RDGW,5986,5986,tcp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Traversal,
+202,Mgt_RDGW,80,80,tcp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Ingress,
+203,Mgt_RDGW,443,443,tcp,Mgt_RDSH,Group,Mgt_RDGW to Mgt_RDSH,Ingress,
+204,Mgt_RDSH,3389,3389,udp,AppD_Windows_Instances,Group,Mgt_RDSH to AppD_Windows_Instances,Traversal,
+205,Mgt_RDSH,5601,5601,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RDSH to Mgt_EnterpriseALB-05,Traversal,
+206,Mgt_EnterpriseALB-05,5601,5601,tcp,Mgt_Kibana,Group,Mgt_EnterpriseALB-05 to Mgt_Kibana,Traversal,
+207,Mgt_RDSH,443,443,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RDSH to Mgt_EnterpriseALB-05,Traversal,
+208,Mgt_RDSH,5555,5555,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RDSH to Mgt_EnterpriseALB-05,Traversal,
+209,Mgt_EnterpriseALB-05,5555,5555,tcp,Mgt_Scout,Group,Mgt_EnterpriseALB-05 to Mgt_Scout,Traversal,
+210,Mgt_RDSH,5985,5985,tcp,Mgt_RDGW,Group,Mgt_RDSH to Mgt_RDGW,Traversal,
+211,Mgt_RDSH,5986,5986,tcp,Mgt_RDGW,Group,Mgt_RDSH to Mgt_RDGW,Traversal,
+212,Mgt_RDSH,135,135,tcp,Mgt_RDLic,Group,Mgt_RDSH to Mgt_RDLic,Traversal,
+213,Mgt_RDSH,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_RDSH to Mgt_ToolingALB-06,Traversal,
+214,Mgt_RDSH,3389,3389,udp,Mgt_Windows_Instances,Group,Mgt_RDSH to Mgt_Windows_Instances,Traversal,
+215,Mgt_RDSH,3389,3389,udp,dmz_Windows_Instances,Group,Mgt_RDSH to dmz_Windows_Instances,Traversal,
+216,Mgt_RevProxy,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_RevProxy to Mgt_ToolingALB-06,Traversal,
+217,Mgt_ToolingALB-06,8081,8081,tcp,Mgt_Artifactory,Group,Mgt_ToolingALB-06 to Mgt_Artifactory,Traversal,
+218,Mgt_RevProxy,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_RevProxy to Mgt_ToolingALB-06,Traversal,
+219,Mgt_RevProxy,5601,5601,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RevProxy to Mgt_EnterpriseALB-05,Traversal,
+220,Mgt_RevProxy,443,443,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RevProxy to Mgt_EnterpriseALB-05,Traversal,
+221,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_Kibana,Group,Mgt_EnterpriseALB-05 to Mgt_Kibana,Traversal,
+222,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_Scout,Group,Mgt_EnterpriseALB-05 to Mgt_Scout,Traversal,
+223,Mgt_RHEL_Instances,53,53,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+224,Mgt_RHEL_Instances,88,88,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+225,Mgt_RHEL_Instances,135,135,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+226,Mgt_RHEL_Instances,389,389,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+227,Mgt_RHEL_Instances,445,445,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+228,Mgt_RHEL_Instances,464,464,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+229,Mgt_RHEL_Instances,636,636,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+230,Mgt_RHEL_Instances,1024,65535,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+231,Mgt_RHEL_Instances,3268,3269,tcp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+232,Mgt_RHEL_Instances,53,53,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+233,Mgt_RHEL_Instances,88,88,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+234,Mgt_RHEL_Instances,123,123,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+235,Mgt_RHEL_Instances,138,138,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+236,Mgt_RHEL_Instances,389,389,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+237,Mgt_RHEL_Instances,445,445,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+238,Mgt_RHEL_Instances,464,464,udp,Active Directory,Group,Mgt_RHEL_Instances to Active Directory,Traversal,
+239,Mgt_RHEL_Instances,443,443,tcp,Mgt_Private_Link,Group,Mgt_RHEL_Instances to Mgt_Private_Link,Traversal,
+240,Mgt_RHEL_Instances,4122,4122,tcp,Mgt_Trend,Group,Mgt_RHEL_Instances to Mgt_Trend,Traversal,
+241,Mgt_RHEL_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+242,Mgt_RHEL_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RHEL_Instances to Mgt_EnterpriseALB-05,Traversal,
+243,Mgt_RHEL_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+244,Mgt_Windows_Instances,53,53,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+245,Mgt_Windows_Instances,88,88,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+246,Mgt_Windows_Instances,135,135,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+247,Mgt_Windows_Instances,389,389,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+248,Mgt_Windows_Instances,445,445,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+249,Mgt_Windows_Instances,464,464,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+250,Mgt_Windows_Instances,636,636,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+251,Mgt_Windows_Instances,1024,65535,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+252,Mgt_Windows_Instances,3268,3269,tcp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+253,Mgt_Windows_Instances,53,53,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+254,Mgt_Windows_Instances,88,88,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+255,Mgt_Windows_Instances,123,123,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+256,Mgt_Windows_Instances,138,138,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+257,Mgt_Windows_Instances,389,389,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+258,Mgt_Windows_Instances,445,445,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+259,Mgt_Windows_Instances,464,464,udp,Active Directory,Group,Mgt_Windows_Instances to Active Directory,Traversal,
+260,Mgt_Windows_Instances,443,443,tcp,Mgt_Private_Link,Group,Mgt_Windows_Instances to Mgt_Private_Link,Traversal,
+261,Mgt_Windows_Instances,4122,4122,tcp,Mgt_Trend,Group,Mgt_Windows_Instances to Mgt_Trend,Traversal,
+262,Mgt_Windows_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+263,Mgt_Windows_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,Mgt_Windows_Instances to Mgt_EnterpriseALB-05,Traversal,
+264,Mgt_Windows_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+265,dmz_RHEL_Instances,53,53,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+266,dmz_RHEL_Instances,88,88,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+267,dmz_RHEL_Instances,135,135,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+268,dmz_RHEL_Instances,389,389,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+269,dmz_RHEL_Instances,445,445,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+270,dmz_RHEL_Instances,464,464,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+271,dmz_RHEL_Instances,636,636,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+272,dmz_RHEL_Instances,1024,65535,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+273,dmz_RHEL_Instances,3268,3269,tcp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+274,dmz_RHEL_Instances,53,53,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+275,dmz_RHEL_Instances,88,88,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+276,dmz_RHEL_Instances,123,123,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+277,dmz_RHEL_Instances,138,138,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+278,dmz_RHEL_Instances,389,389,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+279,dmz_RHEL_Instances,445,445,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+280,dmz_RHEL_Instances,464,464,udp,Active Directory,Group,dmz_RHEL_Instances to Active Directory,Traversal,
+281,dmz_RHEL_Instances,443,443,tcp,dmz_Private_Link,Group,dmz_RHEL_Instances to dmz_Private_Link,Traversal,
+282,dmz_RHEL_Instances,4122,4122,tcp,Mgt_Trend,Group,dmz_RHEL_Instances to Mgt_Trend,Traversal,
+283,dmz_RHEL_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,dmz_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+284,dmz_RHEL_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,dmz_RHEL_Instances to Mgt_EnterpriseALB-05,Traversal,
+285,dmz_RHEL_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,dmz_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+286,dmz_Windows_Instances,53,53,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+287,dmz_Windows_Instances,88,88,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+288,dmz_Windows_Instances,135,135,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+289,dmz_Windows_Instances,389,389,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+290,dmz_Windows_Instances,445,445,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+291,dmz_Windows_Instances,464,464,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+292,dmz_Windows_Instances,636,636,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+293,dmz_Windows_Instances,1024,65535,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+294,dmz_Windows_Instances,3268,3269,tcp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+295,dmz_Windows_Instances,53,53,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+296,dmz_Windows_Instances,88,88,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+297,dmz_Windows_Instances,123,123,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+298,dmz_Windows_Instances,138,138,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+299,dmz_Windows_Instances,389,389,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Egress,
+300,dmz_Windows_Instances,445,445,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+301,dmz_Windows_Instances,464,464,udp,Active Directory,Group,dmz_Windows_Instances to Active Directory,Traversal,
+302,dmz_Windows_Instances,443,443,tcp,dmz_Private_Link,Group,dmz_Windows_Instances to dmz_Private_Link,Traversal,
+303,dmz_Windows_Instances,4122,4122,tcp,Mgt_Trend,Group,dmz_Windows_Instances to Mgt_Trend,Traversal,
+304,dmz_Windows_Instances,80,80,tcp,Mgt_ToolingALB-06,Group,dmz_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+305,Mgt_ToolingALB-06,81,81,tcp,Mgt_YumRepo,Group,Mgt_ToolingALB-06 to Mgt_YumRepo,Traversal,
+306,dmz_Windows_Instances,443,443,tcp,Mgt_EnterpriseALB-05,Group,dmz_Windows_Instances to Mgt_EnterpriseALB-05,Traversal,
+307,dmz_Windows_Instances,8081,8081,tcp,Mgt_ToolingALB-06,Group,dmz_Windows_Instances to Mgt_ToolingALB-06,Traversal,
+308,dmz_S2SVPN,443,443,tcp,dmz_WafALB-09,Group,dmz_S2SVPN to dmz_WafALB-09,Traversal,
+309,dmz_WafALB-09,443,443,tcp,dmz_WAF,Group,dmz_WafALB-09 to dmz_WAF,Traversal,
+310,AppD_WAFALB-11,443,443,tcp,AppD_WAF,Group,AppD_WAFALB-11 to AppD_WAF,Traversal,
+311,dmz_S2SVPN,8000,8199,tcp,dmz_AFTS,Group,dmz_S2SVPN to dmz_AFTS,Traversal,
+312,dmz_S2SVPN,443,443,tcp,192.168.24.0/24,CIDR,dmz_S2SVPN to 192.168.24.0/24,Egress,
+313,dmz_S2SVPN,443,443,tcp,51.231.0.0/16,CIDR,dmz_S2SVPN to 51.231.0.0/16,Egress,
+314,dmz_S2SVPN,443,443,tcp,10.196.0.0/16,CIDR,dmz_S2SVPN to 10.196.0.0/16,Egress,
+315,dmz_S2SVPN,443,443,tcp,10.8.128.0/20,CIDR,dmz_S2SVPN to 10.8.128.0/20,Egress,
+316,dmz_S2SVPN,443,443,tcp,10.8.0.0/20,CIDR,dmz_S2SVPN to 10.8.0.0/20,Egress,
+317,dmz_RHEL_Instances,4122,4122,tcp,Mgt_Trend,Group,dmz_RHEL_Instances to Mgt_Trend,Traversal,
+318,AppD_RHEL_Instances,4122,4122,tcp,Mgt_Trend,Group,AppD_RHEL_Instances to Mgt_Trend,Traversal,
+319,Mgt_Proxy,443,443,tcp,0.0.0.0/0,CIDR,Mgt_Proxy to 0.0.0.0/0,Egress,
+320,Mgt_Proxy,80,80,tcp,0.0.0.0/0,CIDR,Mgt_Proxy to 0.0.0.0/0,Egress,
+321,Mgt_EnterpriseALB-05,5044,5044,tcp,Mgt_Logstash,Group,Mgt_EnterpriseALB-05 to Mgt_Logstash,Traversal,
+322,Mgt_RDSH,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_RDSH to Mgt_ToolingALB-06,Traversal,
+323,Mgt_Windows_Instances,5040,5060,tcp,Mgt_Logstash,Group,Mgt_Windows_Instances to Mgt_Logstash,Traversal,(Logstash)
+324,AppD_Windows_Instances,5040,5060,tcp,Mgt_Logstash,Group,AppD_Windows_Instances to Mgt_Logstash,Traversal,(Logstash)
+325,dmz_Windows_Instances,5040,5060,tcp,Mgt_Logstash,Group,dmz_Windows_Instances to Mgt_Logstash,Traversal,(Logstash)
+326,Mgt_RHEL_Instances,5040,5060,tcp,Mgt_Logstash,Group,Mgt_RHEL_Instances to Mgt_Logstash,Traversal,(Logstash)
+327,AppD_RHEL_Instances,5040,5060,tcp,Mgt_Logstash,Group,AppD_RHEL_Instances to Mgt_Logstash,Traversal,(Logstash)
+328,dmz_RHEL_Instances,5040,5060,tcp,Mgt_Logstash,Group,dmz_RHEL_Instances to Mgt_Logstash,Traversal,(Logstash)
+329,Mgt_RevProxy,5555,5555,tcp,Mgt_EnterpriseALB-05,Group,Mgt_RevProxy to Mgt_EnterpriseALB-05,Traversal,
+331,dmz_Proxy,443,443,tcp,0.0.0.0/0,CIDR,dmz_Proxy to 0.0.0.0/0,Egress,
+332,dmz_Proxy,80,80,tcp,0.0.0.0/0,CIDR,dmz_Proxy to 0.0.0.0/0,Egress,
+333,Mgt_BndrySvcALB-16,443,443,tcp,Mgt_RDGW,Group,Mgt_BndrySvcALB-16 to Mgt_RDGW,Egress,
+334,dmz_S2SVPN,10021,10021,tcp,dmz-BizXferNLB-13,LB_A,dmz_S2SVPN to dmz-BizXferNLB-13,Egress,(Business Transfer)
+335,dmz_S2SVPN,10021,10021,tcp,dmz-BizXferNLB-13,LB_B,dmz_S2SVPN to dmz-BizXferNLB-13,Egress,(Business Transfer)
+336,dmz_S2SVPN,10021,10021,tcp,dmz-BizXferNLB-13,LB_C,dmz_S2SVPN to dmz-BizXferNLB-13,Egress,(Business Transfer)
+337,AppD_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_A,AppD_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+338,AppD_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_B,AppD_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+339,AppD_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_C,AppD_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+340,dmz_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_A,dmz_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+341,dmz_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_B,dmz_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+342,dmz_needs_internet,3128,3128,tcp,dmz-ProxyNLB-08,LB_C,dmz_needs_internet to dmz-ProxyNLB-08,Egress,(Business Proxy)
+343,AppD_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,AppD_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+344,AppD_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,AppD_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+345,AppD_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,AppD_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+346,dmz_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,dmz_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+347,dmz_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,dmz_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+348,dmz_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,dmz_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+349,Mgt_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,Mgt_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+350,Mgt_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,Mgt_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+351,Mgt_needs_internet,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,Mgt_needs_internet to mgmt-ProxyNLB-02,Egress,(MGT Proxy)
+352,Mgt_C2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+353,Mgt_C2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+354,Mgt_C2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+355,Mgt_C2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+356,Mgt_C2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+357,Mgt_C2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_C2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+358,Mgt_S2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+359,Mgt_S2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+360,Mgt_S2SVPN,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Ingress,(Mgt_FTS)
+361,Mgt_S2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+362,Mgt_S2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+363,Mgt_S2SVPN,22,22,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_S2SVPN to mgmt-BndrySvcNLB-03,Egress,(Mgt_JumpSvr)
+364,Mgt_Logstash,9200,9400,tcp,Mgt_Kibana,Group,Mgt_Logstash to Mgt_Kibana,Egress,
+365,AppD_Private_Link,0,65535,tcp,127.0.0.1/32,CIDR,AppD_Private_Link to 127.0.0.1/32,Egress,to itself
+366,Mgt_FTS,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_FTS to 127.0.0.1/32,Egress,to itself
+367,Mgt_MySQL,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_MySQL to 127.0.0.1/32,Egress,to itself
+368,Mgt_PostgreSQL,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_PostgreSQL to 127.0.0.1/32,Egress,to itself
+369,Mgt_Private_Link,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_Private_Link to 127.0.0.1/32,Egress,to itself
+370,Mgt_RDLic,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_RDLic to 127.0.0.1/32,Egress,to itself
+371,Mgt_Scout,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_Scout to 127.0.0.1/32,Egress,to itself
+372,Mgt_TenableScanners,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_TenableScanners to 127.0.0.1/32,Egress,to itself
+373,Mgt_Trend,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_Trend to 127.0.0.1/32,Egress,to itself
+374,Mgt_YumRepo,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_YumRepo to 127.0.0.1/32,Egress,to itself
+375,dmz_AFTS,10021,10021,tcp,192.168.24.234/32,CIDR,dmz_AFTS to 192.168.24.234/32,Egress
+376,Mgt_Kibana,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_Kibana to 127.0.0.1/32,Egress,to itself
+377,Mgt_RDSH,3389,3389,tcp,dmz_Windows_Instances,Group,Mgt_RDSH to dmz_Windows_Instances,Traversal,
+378,Mgt_RDSH,3389,3389,tcp,Mgt_Windows_Instances,Group,Mgt_RDSH to Mgt_Windows_Instances,Traversal,
+379,Mgt_RDSH,3389,3389,tcp,AppD_Windows_Instances,Group,Mgt_RDSH to AppD_Windows_Instances,Traversal,
+380,Mgt_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+381,Mgt_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+382,Mgt_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+383,AppD_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,AppD_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+384,AppD_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,AppD_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+385,AppD_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,AppD_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+386,dmz_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,dmz_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+387,dmz_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,dmz_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+388,dmz_Windows_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,dmz_Windows_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+389,Mgt_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,Mgt_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+390,Mgt_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,Mgt_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+391,Mgt_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,Mgt_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+392,AppD_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,AppD_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+393,AppD_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,AppD_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+394,AppD_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,AppD_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+395,dmz_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_A,dmz_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+396,dmz_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_B,dmz_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+397,dmz_RHEL_Instances,2222,2222,tcp,mgmt-BndrySvcNLB-03,LB_C,dmz_RHEL_Instances to mgmt-BndrySvcNLB-03,Traversal,(AFTS)
+398,Mgt_RHEL_Instances,81,81,tcp,Mgt_ToolingALB-06,Group,Mgt_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+399,AppD_RHEL_Instances,81,81,tcp,Mgt_ToolingALB-06,Group,AppD_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+400,dmz_RHEL_Instances,81,81,tcp,Mgt_ToolingALB-06,Group,dmz_RHEL_Instances to Mgt_ToolingALB-06,Traversal,
+401,dmz_S2SVPN,4500,4500,udp,192.168.223.34/32,CIDR,dmz_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+402,dmz_S2SVPN,500,500,udp,192.168.223.34/32,CIDR,dmz_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+403,dmz_S2SVPN,4500,4500,udp,10.8.0.234/32,CIDR,dmz_S2SVPN to 10.8.0.234/32,Egress,(SG DNS)
+404,dmz_S2SVPN,500,500,udp,10.8.0.234/32,CIDR,dmz_S2SVPN to 10.8.0.234/32,Egress,(SG DNS)
+405,dmz_S2SVPN,4500,4500,udp,10.8.0.243/32,CIDR,dmz_S2SVPN to 10.8.0.243/32,Egress,(SG DNS)
+406,dmz_S2SVPN,500,500,udp,10.8.0.243/32,CIDR,dmz_S2SVPN to 10.8.0.243/32,Egress,(SG DNS)
+407,dmz_S2SVPN,4500,4500,udp,10.8.128.109/32,CIDR,dmz_S2SVPN to 10.8.128.109/32,Egress,(SG DNS)
+408,dmz_S2SVPN,500,500,udp,10.8.128.109/32,CIDR,dmz_S2SVPN to 10.8.128.109/32,Egress,(SG DNS)
+409,dmz_S2SVPN,4500,4500,udp,10.8.128.108/32,CIDR,dmz_S2SVPN to 10.8.128.108/32,Egress,(SG DNS)
+410,dmz_S2SVPN,500,500,udp,10.8.128.108/32,CIDR,dmz_S2SVPN to 10.8.128.108/32,Egress,(SG DNS)
+411,dmz_S2SVPN,4500,4500,udp,10.18.128.92/32,CIDR,dmz_S2SVPN to 10.18.128.92/32,Egress,(SG DNS)
+412,dmz_S2SVPN,500,500,udp,10.18.128.92/32,CIDR,dmz_S2SVPN to 10.18.128.92/32,Egress,(SG DNS)
+413,dmz_S2SVPN,4500,4500,udp,10.10.100.64/32,CIDR,dmz_S2SVPN to 10.10.100.64/32,Egress,(SG DNS)
+414,dmz_S2SVPN,500,500,udp,10.10.100.64/32,CIDR,dmz_S2SVPN to 10.10.100.64/32,Egress,(SG DNS)
+415,dmz_S2SVPN,0,65535,51,192.168.223.26/32,CIDR,dmz_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+416,dmz_S2SVPN,0,65535,50,192.168.223.26/32,CIDR,dmz_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+417,dmz_S2SVPN,0,65535,51,192.168.223.34/32,CIDR,dmz_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+418,dmz_S2SVPN,0,65535,50,192.168.223.34/32,CIDR,dmz_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+419,dmz_S2SVPN,4500,4500,udp,192.168.223.26/32,CIDR,dmz_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+420,dmz_S2SVPN,500,500,udp,192.168.223.26/32,CIDR,dmz_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+421,Mgt_S2SVPN,4500,4500,udp,192.168.223.34/32,CIDR,Mgt_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+422,Mgt_S2SVPN,500,500,udp,192.168.223.34/32,CIDR,Mgt_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+423,Mgt_S2SVPN,4500,4500,udp,10.8.0.234/32,CIDR,Mgt_S2SVPN to 10.8.0.234/32,Egress,(SG DNS)
+424,Mgt_S2SVPN,500,500,udp,10.8.0.234/32,CIDR,Mgt_S2SVPN to 10.8.0.234/32,Egress,(SG DNS)
+425,Mgt_S2SVPN,4500,4500,udp,10.8.0.243/32,CIDR,Mgt_S2SVPN to 10.8.0.243/32,Egress,(SG DNS)
+426,Mgt_S2SVPN,500,500,udp,10.8.0.243/32,CIDR,Mgt_S2SVPN to 10.8.0.243/32,Egress,(SG DNS)
+427,Mgt_S2SVPN,4500,4500,udp,10.8.128.109/32,CIDR,Mgt_S2SVPN to 10.8.128.109/32,Egress,(SG DNS)
+428,Mgt_S2SVPN,500,500,udp,10.8.128.109/32,CIDR,Mgt_S2SVPN to 10.8.128.109/32,Egress,(SG DNS)
+429,Mgt_S2SVPN,4500,4500,udp,10.8.128.108/32,CIDR,Mgt_S2SVPN to 10.8.128.108/32,Egress,(SG DNS)
+430,Mgt_S2SVPN,500,500,udp,10.8.128.108/32,CIDR,Mgt_S2SVPN to 10.8.128.108/32,Egress,(SG DNS)
+431,Mgt_S2SVPN,4500,4500,udp,10.18.128.92/32,CIDR,Mgt_S2SVPN to 10.18.128.92/32,Egress,(SG DNS)
+432,Mgt_S2SVPN,500,500,udp,10.18.128.92/32,CIDR,Mgt_S2SVPN to 10.18.128.92/32,Egress,(SG DNS)
+433,Mgt_S2SVPN,4500,4500,udp,10.10.100.64/32,CIDR,Mgt_S2SVPN to 10.10.100.64/32,Egress,(SG DNS)
+434,Mgt_S2SVPN,500,500,udp,10.10.100.64/32,CIDR,Mgt_S2SVPN to 10.10.100.64/32,Egress,(SG DNS)
+435,Mgt_S2SVPN,0,65535,51,192.168.223.26/32,CIDR,Mgt_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+436,Mgt_S2SVPN,0,65535,50,192.168.223.26/32,CIDR,Mgt_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+437,Mgt_S2SVPN,0,65535,51,192.168.223.34/32,CIDR,Mgt_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+438,Mgt_S2SVPN,0,65535,50,192.168.223.34/32,CIDR,Mgt_S2SVPN to 192.168.223.34/32,Egress,(SG DNS)
+439,Mgt_S2SVPN,4500,4500,udp,192.168.223.26/32,CIDR,Mgt_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+440,Mgt_S2SVPN,500,500,udp,192.168.223.26/32,CIDR,Mgt_S2SVPN to 192.168.223.26/32,Egress,(SG DNS)
+441,Mgt_Logstash,5601,5601,tcp,Mgt_EnterpriseALB-05,Group,Mgt_Logstash to Mgt_EnterpriseALB-05,Egress,
+442,MGMTTemp,0,65535,tcp,MGMTTemp,Group,MGMTTemp to MGMTTemp,Egress,
+443,MGMTTemp,0,65535,tcp,DMZTemp,Group,MGMTTemp to DMZTemp,Egress,
+444,MGMTTemp,0,65535,tcp,APPDATATemp,Group,MGMTTemp to APPDATATemp,Egress,
+445,DMZTemp,0,65535,tcp,MGMTTemp,Group,DMZTemp to MGMTTemp,Egress,
+446,DMZTemp,0,65535,tcp,DMZTemp,Group,DMZTemp to DMZTemp,Egress,
+447,DMZTemp,0,65535,tcp,APPDATATemp,Group,DMZTemp to APPDATATemp,Egress,
+448,APPDATATemp,0,65535,tcp,MGMTTemp,Group,APPDATATemp to MGMTTemp,Egress,
+449,APPDATATemp,0,65535,tcp,DMZTemp,Group,APPDATATemp to DMZTemp,Egress,
+450,APPDATATemp,0,65535,tcp,APPDATATemp,Group,APPDATATemp to APPDATATemp,Egress,
+451,APPDATATemp,81,81,tcp,Mgt_ToolingALB-06,Group,APPDATATemp to Mgt_ToolingALB-06,Traversal,
+452,DMZTemp,81,81,tcp,Mgt_ToolingALB-06,Group,DMZTemp to Mgt_ToolingALB-06,Traversal,
+453,MGMTTemp,81,81,tcp,Mgt_ToolingALB-06,Group,MGMTTemp to Mgt_ToolingALB-06,Traversal,
+454,Mgt_AWX,5985,5986,tcp,Mgt_RHEL_Instances,Group,Mgt_AWX to Mgt_RHEL_Instances,Traversal,
+455,Mgt_AWX,5985,5986,tcp,dmz_RHEL_Instances,Group,Mgt_AWX to dmz_RHEL_Instances,Traversal,
+456,Mgt_AWX,5985,5986,tcp,AppD_RHEL_Instances,Group,Mgt_AWX to AppD_RHEL_Instances,Traversal,
+457,MGMTTemp,3306,3306,tcp,Mgt_MySQL,Group,MGMTTemp to Mgt_MySQL,Traversal,
+458,DMZTemp,3306,3306,tcp,Mgt_MySQL,Group,DMZTemp to Mgt_MySQL,Traversal,
+459,APPDATATemp,3306,3306,tcp,Mgt_MySQL,Group,APPDATATemp to Mgt_MySQL,Traversal,
+460,MGMTTemp,5432,5432,tcp,Mgt_PostgreSQL,Group,MGMTTemp to Mgt_PostgreSQL,Traversal,
+461,DMZTemp,5432,5432,tcp,Mgt_PostgreSQL,Group,DMZTemp to Mgt_PostgreSQL,Traversal,
+462,APPDATATemp,5432,5432,tcp,Mgt_PostgreSQL,Group,APPDATATemp to Mgt_PostgreSQL,Traversal,
+500,Mgt_AWX,80,80,tcp,0.0.0.0/0,CIDR,Mgt_AWX to 0.0.0.0/0,Traversal,Github
+501,Mgt_AWX,443,443,tcp,0.0.0.0/0,CIDR,Mgt_AWX to 0.0.0.0/0,Traversal,Github
+502,Mgt_AWX,22,22,tcp,0.0.0.0/0,CIDR,Mgt_AWX to 0.0.0.0/0,Traversal,Github
+503,Mgt_AWX,3128,3128,tcp,Mgt_Proxy,Group,Mgt_AWX to Mgt_Proxy,Traversal,
+504,Dmz_Private_Link,0,65535,tcp,127.0.0.1/32,CIDR,Dmz_Private_Link to 127.0.0.1/32,Traversal,to itself
+505,Mgt_Artifactory,0,65535,tcp,127.0.0.1/32,CIDR,Mgt_Artifactory to 127.0.0.1/32,Traversal,to itself
+506,Mgt_C2SVPN,3389,3389,tcp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Traversal,
+507,Mgt_C2SVPN,3389,3389,tcp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Traversal,
+508,Mgt_C2SVPN,3389,3389,tcp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Traversal,
+509,Mgt_C2SVPN,3389,3389,udp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Traversal,
+510,Mgt_C2SVPN,3389,3389,udp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Traversal,
+511,Mgt_C2SVPN,3389,3389,udp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Traversal,
+512,Mgt_S2SVPN,3389,3389,tcp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Traversal,
+513,Mgt_S2SVPN,3389,3389,tcp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Traversal,
+514,Mgt_S2SVPN,3389,3389,tcp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Traversal,
+515,Mgt_S2SVPN,3389,3389,udp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Traversal,
+516,Mgt_S2SVPN,3389,3389,udp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Traversal,
+517,Mgt_S2SVPN,3389,3389,udp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Traversal,
+518,Mgt_C2SVPN,5985,5986,tcp,APPDATATemp,Group,Mgt_C2SVPN to APPDATATemp,Traversal,
+519,Mgt_C2SVPN,5985,5986,tcp,DMZTemp,Group,Mgt_C2SVPN to DMZTemp,Traversal,
+520,Mgt_C2SVPN,5985,5986,tcp,MGMTTemp,Group,Mgt_C2SVPN to MGMTTemp,Traversal,
+521,Mgt_S2SVPN,5985,5986,tcp,APPDATATemp,Group,Mgt_S2SVPN to APPDATATemp,Traversal,
+522,Mgt_S2SVPN,5985,5986,tcp,DMZTemp,Group,Mgt_S2SVPN to DMZTemp,Traversal,
+523,Mgt_S2SVPN,5985,5986,tcp,MGMTTemp,Group,Mgt_S2SVPN to MGMTTemp,Traversal,
+600,MGMTTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,MGMTTemp to mgmt-ProxyNLB-02,Traversal,(MGT Proxy)
+601,MGMTTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,MGMTTemp to mgmt-ProxyNLB-02,Traversal,(MGT Proxy)
+602,MGMTTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,MGMTTemp to mgmt-ProxyNLB-02,Traversal,(MGT Proxy)
+611,Mgt_RDSH,0,65535,tcp,Mgt_RDLic,Group,Mgt_RDSH to Mgt_RDLic,Traversal,
+612,Mgt_Windows_Instances,443,443,tcp,pl-7ca54015,Group,Mgt_Windows_Instances to pl-7ca54015,Traversal,S3
+613,AppD_Windows_Instances,443,443,tcp,pl-7ca54015,Group,AppD_Windows_Instances to pl-7ca54015,Traversal,S3
+614,dmz_Windows_Instances,443,443,tcp,pl-7ca54015,Group,dmz_Windows_Instances to pl-7ca54015,Traversal,S3
+615,Mgt_RHEL_Instances,443,443,tcp,pl-7ca54015,Group,Mgt_RHEL_Instances to pl-7ca54015,Traversal,S3
+616,AppD_RHEL_Instances,443,443,tcp,pl-7ca54015,Group,AppD_RHEL_Instances to pl-7ca54015,Traversal,S3
+617,dmz_RHEL_Instances,443,443,tcp,pl-7ca54015,Group,dmz_RHEL_Instances to pl-7ca54015,Traversal,S3
+618,dmz_AFTS,8000,8199,tcp,192.168.24.234/32,CIDR,dmz_AFTS to 192.168.24.234/32,Traversal,
+619,dmz_AFTS,443,443,tcp,0.0.0.0/0,CIDR,dmz_AFTS to 0.0.0.0/0,Traversal,
+620,DMZTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,DMZTemp to mgmt-ProxyNLB-02,Traversal,
+621,DMZTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,DMZTemp to mgmt-ProxyNLB-02,Traversal,
+622,DMZTemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,DMZTemp to mgmt-ProxyNLB-02,Traversal,
+623,APPDATATemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_A,APPDATATemp to mgmt-ProxyNLB-02,Traversal,
+624,APPDATATemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_B,APPDATATemp to mgmt-ProxyNLB-02,Traversal,
+625,APPDATATemp,3128,3128,tcp,mgmt-ProxyNLB-02,LB_C,APPDATATemp to mgmt-ProxyNLB-02,Traversal,
+626,DMZTemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_A,DMZTemp to dmz-ProxyNLB-08,Traversal,
+627,DMZTemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_B,DMZTemp to dmz-ProxyNLB-08,Traversal,
+628,DMZTemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_C,DMZTemp to dmz-ProxyNLB-08,Traversal,
+629,APPDATATemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_A,APPDATATemp to dmz-ProxyNLB-08,Traversal,
+630,APPDATATemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_B,APPDATATemp to dmz-ProxyNLB-08,Traversal,
+631,APPDATATemp,3128,3128,tcp,dmz-ProxyNLB-08,LB_C,APPDATATemp to dmz-ProxyNLB-08,Traversal,

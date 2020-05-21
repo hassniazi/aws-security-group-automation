@@ -1,0 +1,47 @@
+SECURITY GROUP NAME,SECURITY GROUP DESCRIPTION,vpc_code
+AppD_Needs_Internet,Control flow to and from AppD_Needs_Internet,Appdata
+AppD_Private_Link,Control flow to and from any Private Link,Appdata
+AppD_RHEL_instances,Control flow to and from AppD_RHEL_instances,Appdata
+AppD_WAF,Control flow to and from AppD_WAF,Appdata
+AppD_WAFALB-11,Control flow to and from AppD_WafALB-11,Appdata
+AppD_Windows_instances,Control flow to and from AppD_Windows_instances,Appdata
+Mgt_Artifactory,Control flow to and from Mgt_Artifactory,Mgmt
+Mgt_AWX,Control flow to and from Mgt_AWX,Mgmt
+Mgt_BndrySvcALB-07,Control flow to and from Mgt_BndrySvcALB-07,Mgmt
+Mgt_BndrySvcALB-16,Control flow to and from Mgt_BndrySvcALB-16,Mgmt
+Mgt_C2SVPN,Control flow to and from Mgt_C2SVPN,Mgmt
+Mgt_EnterpriseALB-05,Control flow to and from Mgt_EnterpriseALB-05,Mgmt
+Mgt_ESearch,Control flow to and from Mgt_ESearch,Mgmt
+Mgt_FTS,Control flow to and from Mgt_FTS,Mgmt
+Mgt_JumpSvr,Control flow to and from Mgt_JumpSvr,Mgmt
+Mgt_Kibana,Control flow to and from Mgt_Kibana,Mgmt
+Mgt_Logstash,Control flow to and from Mgt_Logstash,Mgmt
+Mgt_MySQL,Control flow to and from Mgt_MySQL,Mgmt
+Mgt_Needs_Internet,Control flow to and from Mgt_Needs_Internet,Mgmt
+Mgt_PostgreSQL,Control flow to and from Mgt_PostgreSQL,Mgmt
+Mgt_Privacyidea,Control flow to and from Mgt_Privacyidea,Mgmt
+Mgt_Private_Link,Control flow to and from any Private Link,Mgmt
+Mgt_Proxy,Control flow to and from Mgt_Proxy,Mgmt
+Mgt_RDGW,Control flow to and from Mgt_RDGW,Mgmt
+Mgt_RDLic,Control flow to and from Mgt_RDLic,Mgmt
+Mgt_RDSH,Control flow to and from and from Session Host,Mgmt
+Mgt_RevProxy,Control flow to and from Mgt_RevProxy,Mgmt
+Mgt_RHEL_instances,Control flow to and from Mgt_RHEL_instances,Mgmt
+Mgt_S2SVPN,Control flow to and from Mgt_S2SVPN,Mgmt
+Mgt_Scout,Control flow to and from Mgt_Scout,Mgmt
+Mgt_SysLogsCLB-01,Control flow to and from Mgt_SysLogsCLB-01,Mgmt
+Mgt_TenableScanners,Control flow to and from and from Session Host,Mgmt
+Mgt_ToolingALB-06,Control flow to and from Mgt_ToolingALB-06,Mgmt
+Mgt_Trend,Control flow to and from Mgt_Trend,Mgmt
+Mgt_Windows_instances,Control flow to and from Mgt_Windows_instances,Mgmt
+Mgt_YumRepo,Control flow to and from Mgt_YumRepo,Mgmt
+dmz_AFTS,Control flow to and from dmz_AFTS,dmz
+dmz_Needs_Internet,Control flow to and from dmz_Needs_Internet,dmz
+dmz_Private_Link,Control flow to and from any Private Link,dmz
+dmz_Proxy,Control flow to and from dmz_Proxy,dmz
+dmz_RHEL_instances,Control flow to and from dmz_RHEL_instances,dmz
+dmz_S2SVPN,Control flow to and from dmz_S2SVPN,dmz
+dmz_WAF,Control flow to and from dmz_WAF,dmz
+dmz_WafALB-09,Control flow to and from dmz_WafALB-09,dmz
+dmz_Windows_instances,Control flow to and from dmz_Windows_instances,dmz
+Mgt_BindSvr,BIND servers flow control,Mgmt

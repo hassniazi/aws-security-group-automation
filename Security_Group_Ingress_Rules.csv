@@ -1,0 +1,295 @@
+RULE ID,SECURITY GROUP NAME,FROM PORT,TO PORT,PROTOCOL,FROM REFERENCE,FROM TYPE,DESCRIPTION,DIRECTION,Notes
+1,dmz_Proxy,3128,3128,tcp,172.23.32.0/19,CIDR,172.23.160.0/19 to connect via 3128 to dmz_Proxy,Egress,(AppData VPC)
+2,Mgt_Proxy,3128,3128,tcp,172.23.64.0/19,CIDR,172.23.192.0/19 to connect via 3128 to Mgt_Proxy,Egress,(MGT VPC)
+3,dmz_Proxy,3128,3128,tcp,172.23.0.0/19,CIDR,172.23.128.0/19 to connect via 3128 to dmz_Proxy,Egress,(DMZ VPC)
+4,Mgt_Proxy,3128,3128,tcp,172.23.32.0/19,CIDR,172.23.160.0/19 to connect via 3128 to Mgt_Proxy,Egress,(AppData VPC)
+5,Mgt_Proxy,3128,3128,tcp,172.23.0.0/19,CIDR,172.23.128.0/19 to connect via 3128 to Mgt_Proxy,Egress,(DMZ VPC)
+6,Mgt_Proxy,3128,3128,tcp,MGMTTemp,Group,MGMTTemp to connect via 3128 to Mgt_Proxy,Egress,
+7,dmz_Proxy,3128,3128,tcp,DMZTemp,Group,DMZTemp to connect via 3128 to dmz_Proxy,Egress,
+8,dmz_Proxy,3128,3128,tcp,APPDATATemp,Group,APPDATATemp to connect via 3128 to dmz_Proxy,Egress,
+9,Mgt_Proxy,3128,3128,tcp,DMZTemp,Group,DMZTemp to connect via 3128 to Mgt_Proxy,Egress,
+10,Mgt_Proxy,3128,3128,tcp,APPDATATemp,Group,APPDATATemp to connect via 3128 to Mgt_Proxy,Egress,
+11,Mgt_C2SVPN,1194,1194,udp,82.0.240.237/32,CIDR,82.0.240.237/32 to connect via 1194 to Mgt_C2SVPN,Ingress,SG DNS
+12,Mgt_C2SVPN,1194,1194,udp,164.134.2.3/32,CIDR,164.134.2.3/32 to connect via 1194 to Mgt_C2SVPN,Ingress,SG DNS
+13,Mgt_C2SVPN,1194,1194,udp,164.134.2.12/32,CIDR,164.134.2.12/32 to connect via 1194 to Mgt_C2SVPN,Ingress,SG DNS
+14,Mgt_S2SVPN,4500,4500,udp,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+15,Mgt_S2SVPN,500,500,udp,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+16,Mgt_S2SVPN,22,22,tcp,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 22 to Mgt_S2SVPN,Ingress,SG DNS
+17,dmz_S2SVPN,10021,10021,tcp,dmz_AFTS,Group,dmz_AFTS to connect via 10021 to dmz_S2SVPN,Traversal,
+18,dmz_S2SVPN,8000,8199,tcp,dmz_AFTS,Group,dmz_AFTS to connect via 8000 to dmz_S2SVPN,Traversal,
+19,Mgt_S2SVPN,4500,4500,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+20,Mgt_S2SVPN,500,500,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+21,Mgt_S2SVPN,4500,4500,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+22,Mgt_S2SVPN,500,500,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+23,Mgt_S2SVPN,4500,4500,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+24,Mgt_S2SVPN,500,500,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+25,Mgt_S2SVPN,4500,4500,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+26,Mgt_S2SVPN,500,500,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+27,Mgt_S2SVPN,4500,4500,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+28,Mgt_S2SVPN,500,500,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+29,Mgt_S2SVPN,4500,4500,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+30,Mgt_S2SVPN,500,500,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+31,dmz_S2SVPN,4500,4500,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+32,dmz_S2SVPN,500,500,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+33,dmz_S2SVPN,4500,4500,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+34,dmz_S2SVPN,500,500,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+35,dmz_S2SVPN,4500,4500,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+36,dmz_S2SVPN,500,500,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+37,dmz_S2SVPN,4500,4500,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+38,dmz_S2SVPN,500,500,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+39,dmz_S2SVPN,4500,4500,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+40,dmz_S2SVPN,500,500,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+41,dmz_S2SVPN,4500,4500,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via 4500 to dmz_S2SVPN,Ingress,SG DNS
+42,dmz_S2SVPN,500,500,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via 500 to dmz_S2SVPN,Ingress,SG DNS
+43,MGMTTemp,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to MGMTTemp,Traversal,
+44,DMZTemp,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to DMZTemp,Traversal,
+45,APPDATATemp,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to APPDATATemp,Traversal,
+46,MGMTTemp,22,22,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 22 to MGMTTemp,Ingress,
+47,DMZTemp,22,22,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 22 to DMZTemp,Ingress,
+48,APPDATATemp,22,22,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 22 to APPDATATemp,Ingress,
+49,MGMTTemp,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to MGMTTemp,Ingress,
+50,DMZTemp,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to DMZTemp,Ingress,
+51,APPDATATemp,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to APPDATATemp,Ingress,
+52,MGMTTemp,5985,5985,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5985 to MGMTTemp,Ingress,
+53,DMZTemp,5985,5985,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5985 to DMZTemp,Ingress,
+54,APPDATATemp,5985,5985,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5985 to APPDATATemp,Ingress,
+55,MGMTTemp,5986,5986,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5986 to MGMTTemp,Ingress,
+56,DMZTemp,5986,5986,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5986 to DMZTemp,Ingress,
+57,APPDATATemp,5986,5986,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5986 to APPDATATemp,Ingress,
+58,MGMTTemp,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to MGMTTemp,Ingress,
+59,MGMTTemp,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to MGMTTemp,Ingress,
+60,DMZTemp,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to DMZTemp,Ingress,
+61,DMZTemp,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to DMZTemp,Ingress,
+62,APPDATATemp,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to APPDATATemp,Ingress,
+63,APPDATATemp,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to APPDATATemp,Ingress,
+64,Mgt_FTS,2222,2222,tcp,172.23.64.0/19,CIDR,172.23.192.0/19 to connect via 2222 to Mgt_FTS,Ingress,(C2S + S2S)
+65,Mgt_BndrySvcALB-16,443,443,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 443 to Mgt_BndrySvcALB-16,Ingress,
+66,Mgt_RDGW,80,80,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 80 to Mgt_RDGW,Ingress,
+67,Mgt_RDGW,3391,3391,udp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 3391 to Mgt_RDGW,Ingress,
+68,Mgt_RevProxy,443,443,tcp,Mgt_BndrySvcALB-07,Group,Mgt_BndrySvcALB-07 to connect via 443 to Mgt_RevProxy,Ingress,
+69,Mgt_BndrySvcALB-07,443,443,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 443 to Mgt_BndrySvcALB-07,Ingress,
+70,Mgt_RevProxy,80,80,tcp,Mgt_BndrySvcALB-07,Group,Mgt_BndrySvcALB-07 to connect via 80 to Mgt_RevProxy,Ingress,
+71,Mgt_BndrySvcALB-07,80,80,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 80 to Mgt_BndrySvcALB-07,Ingress,
+72,Mgt_RevProxy,8081,8081,tcp,Mgt_BndrySvcALB-07,Group,Mgt_BndrySvcALB-07 to connect via 8081 to Mgt_RevProxy,Ingress,
+73,Mgt_BndrySvcALB-07,8081,8081,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 8081 to Mgt_BndrySvcALB-07,Ingress,
+74,Mgt_JumpSvr,22,22,tcp,172.23.64.0/19,CIDR,172.23.192.0/19 to connect via 22 to Mgt_JumpSvr,Ingress,(C2S + S2S)
+75,AppD_RHEL_Instances,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to AppD_RHEL_Instances,Traversal,
+76,Mgt_RHEL_Instances,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to Mgt_RHEL_Instances,Traversal,
+77,dmz_RHEL_Instances,22,22,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 22 to dmz_RHEL_Instances,Traversal,
+78,AppD_RHEL_Instances,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to AppD_RHEL_Instances,Ingress,
+79,Mgt_RHEL_Instances,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to Mgt_RHEL_Instances,Ingress,
+80,dmz_RHEL_Instances,22,22,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 22 to dmz_RHEL_Instances,Ingress,
+81,Mgt_RDSH,3389,3389,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 3389 to Mgt_RDSH,Ingress,
+82,Mgt_RDSH,3389,3389,udp,Mgt_RDGW,Group,Mgt_RDGW to connect via 3389 to Mgt_RDSH,Ingress,
+83,Mgt_RDSH,5985,5985,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 5985 to Mgt_RDSH,Ingress,
+84,Mgt_RDSH,5986,5986,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 5986 to Mgt_RDSH,Ingress,
+85,Mgt_RDLic,5985,5985,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 5985 to Mgt_RDLic,Ingress,
+86,Mgt_RDLic,5986,5986,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 5986 to Mgt_RDLic,Ingress,
+87,Mgt_RDLic,135,135,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 135 to Mgt_RDLic,Ingress,
+88,Mgt_RDGW,5985,5985,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 5985 to Mgt_RDGW,Ingress,
+89,Mgt_RDGW,5986,5986,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 5986 to Mgt_RDGW,Ingress,
+90,AppD_Windows_Instances,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to AppD_Windows_Instances,Ingress,
+91,AppD_Windows_Instances,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to AppD_Windows_Instances,Ingress,
+92,dmz_Windows_Instances,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to dmz_Windows_Instances,Ingress,
+93,dmz_Windows_Instances,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to dmz_Windows_Instances,Ingress,
+94,Mgt_Windows_Instances,3389,3389,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to Mgt_Windows_Instances,Ingress,
+95,Mgt_Windows_Instances,3389,3389,udp,Mgt_RDSH,Group,Mgt_RDSH to connect via 3389 to Mgt_Windows_Instances,Ingress,
+96,Mgt_BndrySvcALB-16,443,443,tcp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 443 to Mgt_BndrySvcALB-16,Ingress,
+97,Mgt_RDGW,80,80,tcp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 80 to Mgt_RDGW,Ingress,
+98,Mgt_RDGW,3391,3391,udp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 3391 to Mgt_RDGW,Ingress,
+99,Mgt_RDSH,5985,5985,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5985 to Mgt_RDSH,Ingress,
+100,Mgt_RDSH,5986,5986,tcp,Mgt_C2SVPN,Group,Mgt_C2SVPN to connect via 5986 to Mgt_RDSH,Ingress,
+101,Mgt_BndrySvcALB-07,443,443,tcp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 443 to Mgt_BndrySvcALB-07,Ingress,
+102,Mgt_BndrySvcALB-07,80,80,tcp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 80 to Mgt_BndrySvcALB-07,Ingress,
+103,Mgt_BndrySvcALB-07,8081,8081,tcp,Mgt_S2SVPN,Group,Mgt_S2SVPN to connect via 8081 to Mgt_BndrySvcALB-07,Ingress,
+104,dmz_S2SVPN,4500,4500,udp,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 4500 to dmz_S2SVPN,Traversal,SG DNS
+105,dmz_S2SVPN,500,500,udp,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 500 to dmz_S2SVPN,Traversal,SG DNS
+106,Mgt_PostgreSQL,5432,5432,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5432 to Mgt_PostgreSQL,Traversal,
+107,Mgt_EnterpriseALB-05,5601,5601,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 5601 to Mgt_EnterpriseALB-05,Traversal,
+108,Mgt_Kibana,5601,5601,tcp,Mgt_EnterpriseALB-05,Group,Mgt_EnterpriseALB-05 to connect via 5601 to Mgt_Kibana,Traversal,
+109,Mgt_EnterpriseALB-05,5555,5555,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 5555 to Mgt_EnterpriseALB-05,Traversal,
+110,Mgt_Scout,5555,5555,tcp,Mgt_EnterpriseALB-05,Group,Mgt_EnterpriseALB-05 to connect via 5555 to Mgt_Scout,Traversal,
+111,Mgt_PrivacyIdea,443,443,tcp,Mgt_EnterpriseALB-05,Group,Mgt_EnterpriseALB-05 to connect via 443 to Mgt_PrivacyIdea,Traversal,
+112,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 443 to Mgt_EnterpriseALB-05,Traversal,
+113,Mgt_ESearch,9200,9400,tcp,Mgt_ESearch,Group,Mgt_ESearch to connect via 9200 to Mgt_ESearch,Traversal,
+114,Mgt_ESearch,9200,9400,tcp,Mgt_Kibana,Group,Mgt_Kibana to connect via 9200 to Mgt_ESearch,Traversal,
+115,Mgt_ESearch,9200,9400,tcp,Mgt_Logstash,Group,Mgt_Logstash to connect via 9200 to Mgt_ESearch,Traversal,
+116,Mgt_Logstash,5040,5060,tcp,AppD_Windows_instances,Group,AppD_Windows_instances to connect via 5044 to Mgt_Logstash,Traversal,
+117,Mgt_Logstash,5040,5060,tcp,AppD_RHEL_instances,Group,AppD_RHEL_instances to connect via 5044 to Mgt_Logstash,Traversal,
+118,Mgt_Logstash,5040,5060,tcp,Mgt_RHEL_instances,Group,Mgt_RHEL_instances to connect via 5044 to Mgt_Logstash,Traversal,
+119,Mgt_MySQL,3306,3306,tcp,Mgt_PrivacyIdea,Group,Mgt_PrivacyIdea to connect via 3306 to Mgt_MySQL,Traversal,
+120,Mgt_ToolingALB-06,80,80,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 80 to Mgt_ToolingALB-06,Traversal,
+121,Mgt_EnterpriseALB-05,5601,5601,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 5601 to Mgt_EnterpriseALB-05,Traversal,
+122,Mgt_PrivacyIdea,443,443,tcp,Mgt_RDSH,Group,Mgt_RDSH to connect via 443 to Mgt_PrivacyIdea,Traversal,
+123,Mgt_Artifactory,8081,8081,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 8081 to Mgt_Artifactory,Traversal,
+124,Mgt_ToolingALB-06,8081,8081,tcp,MGMTTemp,Group,MGMTTemp to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+125,Mgt_ToolingALB-06,8081,8081,tcp,APPDATATemp,Group,APPDATATemp to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+126,Mgt_ToolingALB-06,8081,8081,tcp,DMZTemp,Group,DMZTemp to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+127,Mgt_ToolingALB-06,8081,8081,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+128,Mgt_ToolingALB-06,8081,8081,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+129,Mgt_ToolingALB-06,8081,8081,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+130,Mgt_ToolingALB-06,8081,8081,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+131,Mgt_ToolingALB-06,8081,8081,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+132,Mgt_ToolingALB-06,8081,8081,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+133,dmz_Proxy,3128,3128,tcp,MGMTTemp,Group,MGMTTemp to connect via 3128 to dmz_Proxy,Traversal,
+134,Mgt_AWX,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 80 to Mgt_AWX,Traversal,
+135,Mgt_ToolingALB-06,80,80,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 80 to Mgt_ToolingALB-06,Traversal,
+136,Mgt_AWX,443,443,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 443 to Mgt_AWX,Traversal,
+137,Mgt_ToolingALB-06,8081,8081,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 8081 to Mgt_ToolingALB-06,Traversal,
+138,Mgt_Artifactory,80,80,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 80 to Mgt_Artifactory,Traversal,
+139,Mgt_Artifactory,443,443,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 443 to Mgt_Artifactory,Traversal,
+140,Mgt_YumRepo,81,81,tcp,Mgt_ToolingALB-06,Group,Mgt_ToolingALB-06 to connect via 81 to Mgt_YumRepo,Traversal,
+141,Mgt_ToolingALB-06,81,81,tcp,MGMTTemp,Group,MGMTTemp to connect via 81 to Mgt_ToolingALB-06,Traversal,
+142,Mgt_ToolingALB-06,81,81,tcp,APPDATATemp,Group,APPDATATemp to connect via 81 to Mgt_ToolingALB-06,Traversal,
+143,Mgt_ToolingALB-06,81,81,tcp,DMZTemp,Group,DMZTemp to connect via 81 to Mgt_ToolingALB-06,Traversal,
+144,Mgt_ToolingALB-06,81,81,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+145,Mgt_ToolingALB-06,81,81,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+146,Mgt_ToolingALB-06,81,81,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+147,Mgt_ToolingALB-06,81,81,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+148,Mgt_ToolingALB-06,81,81,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+149,Mgt_ToolingALB-06,81,81,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 81 to Mgt_ToolingALB-06,Traversal,
+150,Mgt_ToolingALB-06,80,80,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+151,Mgt_ToolingALB-06,80,80,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+152,Mgt_ToolingALB-06,80,80,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+153,Mgt_ToolingALB-06,80,80,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+154,Mgt_ToolingALB-06,80,80,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+155,Mgt_ToolingALB-06,80,80,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 80 to Mgt_ToolingALB-06,Traversal,
+156,Mgt_ToolingALB-06,80,80,tcp,MGMTTemp,Group,MGMTTemp to connect via 80 to Mgt_ToolingALB-06,Traversal,
+157,Mgt_ToolingALB-06,80,80,tcp,APPDATATemp,Group,APPDATATemp to connect via 80 to Mgt_ToolingALB-06,Traversal,
+158,Mgt_ToolingALB-06,80,80,tcp,DMZTemp,Group,DMZTemp to connect via 80 to Mgt_ToolingALB-06,Traversal,
+159,dmz_WafALB-09,443,443,tcp,dmz_S2SVPN,Group,dmz_S2SVPN to connect via 443 to dmz_WafALB-09,Traversal,
+161,dmz_WAF,443,443,tcp,dmz_WafALB-09,Group,dmz_WafALB-09 to connect via 443 to dmz_WAF,Traversal,
+162,AppD_WAF,443,443,tcp,AppD_WafALB-11,Group,AppD_WafALB-11 to connect via 443 to AppD_WAF,Traversal,
+163,dmz_AFTS,10021,10021,tcp,172.23.0.0/19,CIDR,172.23.128.0/19 to connect via 10021 to dmz_AFTS,Traversal,DMZ VPC
+164,dmz_AFTS,8000,8199,tcp,dmz_S2SVPN,Group,dmz_S2SVPN to connect via 8000 to dmz_AFTS,Traversal,
+165,dmz_AFTS,80,80,tcp,dmz_S2SVPN,Group,dmz_S2SVPN to connect via 80 to dmz_AFTS,Traversal,
+166,dmz_AFTS,443,443,tcp,dmz_S2SVPN,Group,dmz_S2SVPN to connect via 443 to dmz_AFTS,Traversal,
+167,Mgt_Trend,4122,4122,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 4122 to Mgt_Trend,Traversal,
+168,Mgt_Trend,4122,4122,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 4122 to Mgt_Trend,Traversal,
+169,Mgt_Trend,4122,4122,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 4122 to Mgt_Trend,Traversal,
+170,Mgt_Trend,4122,4122,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 4122 to Mgt_Trend,Traversal,
+171,Mgt_Trend,4122,4122,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 4122 to Mgt_Trend,Traversal,
+172,Mgt_Trend,4122,4122,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 4122 to Mgt_Trend,Traversal,
+173,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_RDGW,Group,Mgt_RDGW to connect via 443 to Mgt_EnterpriseALB-05,Traversal,
+174,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_JumpSvr,Group,Mgt_JumpSvr to connect via 443 to Mgt_EnterpriseALB-05,Traversal,
+175,Mgt_TenableScanners,443,443,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+176,Mgt_TenableScanners,443,443,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+177,Mgt_TenableScanners,443,443,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+178,Mgt_TenableScanners,443,443,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+179,Mgt_TenableScanners,443,443,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+180,Mgt_TenableScanners,443,443,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 443 to Mgt_TenableScanners,Traversal,
+181,Mgt_TenableScanners,80,80,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 80 to Mgt_TenableScanners,Traversal,
+182,Mgt_TenableScanners,80,80,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 80 to Mgt_TenableScanners,Traversal,
+183,Mgt_TenableScanners,80,80,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 80 to Mgt_TenableScanners,Traversal,
+184,Mgt_TenableScanners,80,80,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 80 to Mgt_TenableScanners,Traversal,
+185,Mgt_TenableScanners,80,80,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 80 to Mgt_TenableScanners,Traversal,
+186,Mgt_TenableScanners,80,80,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 80 to Mgt_TenableScanners,Group,
+187,Mgt_Private_Link,443,443,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 443 to Mgt_Private_Link,Group,
+188,dmz_Private_Link,443,443,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 443 to dmz_Private_Link,Group,
+189,AppD_Private_Link,443,443,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 443 to AppD_Private_Link,Group,
+190,Mgt_Private_Link,443,443,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 443 to Mgt_Private_Link,Group,
+191,dmz_Private_Link,443,443,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 443 to dmz_Private_Link,Group,
+192,AppD_Private_Link,443,443,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 443 to AppD_Private_Link,Group,
+193,Mgt_Private_Link,443,443,tcp,MGMTTemp,Group,MGMTTemp to connect via 443 to Mgt_Private_Link,Group,
+194,dmz_Private_Link,443,443,tcp,DMZTemp,Group,DMZTemp to connect via 443 to dmz_Private_Link,Group,
+195,AppD_Private_Link,443,443,tcp,APPDATATemp,Group,APPDATATemp to connect via 443 to AppD_Private_Link,Group,
+196,Mgt_EnterpriseALB-05,5044,5044,tcp,Mgt_RevProxy,Group,Mgt_RevProxy to connect via 5044 to Mgt_EnterpriseALB-05,Traversal,
+197,Mgt_RDGW,443,443,tcp,Mgt_BndrySvcALB-16,Group,Mgt_BndrySvcALB-16 to connect via 443 to Mgt_RDGW,Ingress,
+198,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_Windows_Instances,Group,Mgt_Windows_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+199,Mgt_EnterpriseALB-05,443,443,tcp,AppD_Windows_Instances,Group,AppD_Windows_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+200,Mgt_EnterpriseALB-05,443,443,tcp,dmz_Windows_Instances,Group,dmz_Windows_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+201,Mgt_EnterpriseALB-05,443,443,tcp,Mgt_RHEL_Instances,Group,Mgt_RHEL_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+202,Mgt_EnterpriseALB-05,443,443,tcp,AppD_RHEL_Instances,Group,AppD_RHEL_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+203,Mgt_EnterpriseALB-05,443,443,tcp,dmz_RHEL_Instances,Group,dmz_RHEL_Instances to connect via 443 to Mgt_EnterpriseALB-05,Traversal,PrvIdea
+204,dmz_S2SVPN,4500,4500,udp,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 4500 to dmz_S2SVPN,Traversal,SG DNS
+205,dmz_S2SVPN,500,500,udp,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 500 to dmz_S2SVPN,Traversal,SG DNS
+206,dmz_S2SVPN,0,65535,51,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 0 to dmz_S2SVPN,Traversal,SG DNS
+207,dmz_S2SVPN,0,65535,50,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 0 to dmz_S2SVPN,Traversal,SG DNS
+208,dmz_S2SVPN,0,65535,51,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 0 to dmz_S2SVPN,Traversal,SG DNS
+209,dmz_S2SVPN,0,65535,50,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 0 to dmz_S2SVPN,Traversal,SG DNS
+210,Mgt_S2SVPN,0,65535,51,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 0 to Mgt_S2SVPN,Ingress,SG DNS
+211,Mgt_S2SVPN,0,65535,50,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 0 to Mgt_S2SVPN,Ingress,SG DNS
+212,Mgt_S2SVPN,0,65535,51,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 0 to Mgt_S2SVPN,Ingress,SG DNS
+213,Mgt_S2SVPN,0,65535,50,192.168.223.34/32,CIDR,192.168.223.34/32 to connect via 0 to Mgt_S2SVPN,Ingress,SG DNS
+214,Mgt_S2SVPN,4500,4500,udp,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 4500 to Mgt_S2SVPN,Ingress,SG DNS
+215,Mgt_S2SVPN,500,500,udp,192.168.223.26/32,CIDR,192.168.223.26/32 to connect via 500 to Mgt_S2SVPN,Ingress,SG DNS
+216,Mgt_Logstash,5040,5060,tcp,Mgt_Windows_instances,Group,Mgt_Windows_instances to connect via 5044 to Mgt_Logstash,Traversal,
+217,Mgt_Logstash,5040,5060,tcp,dmz_RHEL_instances,Group,dmz_RHEL_instances to connect via 5044 to Mgt_Logstash,Traversal,
+218,Mgt_Logstash,5040,5060,tcp,dmz_Windows_instances,Group,dmz_Windows_instances to connect via 5044 to Mgt_Logstash,Traversal,
+219,Mgt_Kibana,9200,9400,tcp,Mgt_Logstash,Group,Mgt_Logstash to connect via 9200 to Mgt_Kibana,Egress,
+220,Mgt_Windows_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to Mgt_Windows_Instances,Ingress,
+221,dmz_Windows_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to dmz_Windows_Instances,Ingress,
+222,MGMTTemp,0,65535,tcp,MGMTTemp,Group,MGMTTemp to connect via 0 to MGMTTemp,Ingress,
+223,MGMTTemp,0,65535,tcp,DMZTemp,Group,DMZTemp to connect via 0 to MGMTTemp,Ingress,
+224,MGMTTemp,0,65535,tcp,APPDATATemp,Group,APPDATATemp to connect via 0 to MGMTTemp,Ingress,
+225,DMZTemp,0,65535,tcp,MGMTTemp,Group,MGMTTemp to connect via 0 to DMZTemp,Ingress,
+226,DMZTemp,0,65535,tcp,DMZTemp,Group,DMZTemp to connect via 0 to DMZTemp,Ingress,
+227,DMZTemp,0,65535,tcp,APPDATATemp,Group,APPDATATemp to connect via 0 to DMZTemp,Ingress,
+228,APPDATATemp,0,65535,tcp,MGMTTemp,Group,MGMTTemp to connect via 0 to APPDATATemp,Ingress,
+229,APPDATATemp,0,65535,tcp,DMZTemp,Group,DMZTemp to connect via 0 to APPDATATemp,Ingress,
+230,APPDATATemp,0,65535,tcp,APPDATATemp,Group,APPDATATemp to connect via 0 to APPDATATemp,Ingress,
+231,Mgt_MySQL,3306,3306,tcp,MGMTTemp,Group,MGMTTemp to connect via 3306 to Mgt_MySQL,Traversal,
+232,Mgt_MySQL,3306,3306,tcp,DMZTemp,Group,DMZTemp to connect via 3306 to Mgt_MySQL,Traversal,
+233,Mgt_MySQL,3306,3306,tcp,APPDATATemp,Group,APPDATATemp to connect via 3306 to Mgt_MySQL,Traversal,
+234,Mgt_PostgreSQL,5432,5432,tcp,MGMTTemp,Group,MGMTTemp to connect via 5432 to Mgt_PostgreSQL,Traversal,
+235,Mgt_PostgreSQL,5432,5432,tcp,DMZTemp,Group,DMZTemp to connect via 5432 to Mgt_PostgreSQL,Traversal,
+236,Mgt_PostgreSQL,5432,5432,tcp,APPDATATemp,Group,APPDATATemp to connect via 5432 to Mgt_PostgreSQL,Traversal,
+237,MGMTTemp,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to MGMTTemp,Ingress,
+238,DMZTemp,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to DMZTemp,Ingress,
+239,APPDATATemp,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to APPDATATemp,Ingress,
+240,AppD_RHEL_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to AppD_RHEL_Instances,Ingress,
+241,Mgt_RHEL_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to Mgt_RHEL_Instances,Ingress,
+242,dmz_RHEL_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to dmz_RHEL_Instances,Ingress,
+243,AppD_Windows_Instances,5985,5986,tcp,Mgt_AWX,Group,Mgt_AWX to connect via 5985 to AppD_Windows_Instances,Ingress,
+244,Mgt_PostgreSQL,5432,5432,tcp,MGMTTemp,Group,MGMTTemp to connect via 5432 to Mgt_PostgreSQL,Ingress,
+245,Mgt_PostgreSQL,5432,5432,tcp,DMZTemp,Group,DMZTemp to connect via 5432 to Mgt_PostgreSQL,Ingress,
+246,Mgt_PostgreSQL,5432,5432,tcp,APPDATATemp,Group,APPDATATemp to connect via 5432 to Mgt_PostgreSQL,Ingress,
+300,Mgt_Proxy,3128,3128,tcp,Mgt_AWX,Group,Mgt_Proxy to connect via 3128 to Mgt_AWX,Ingress,
+301,Mgt_ToolingALB-06,8081,8081,tcp,Mgt_C2SVPN,Group,Mgt_ToolingALB-06 to connect via 8081 to Mgt_C2SVPN,Ingress,
+302,APPDATATemp,3389,3389,tcp,Mgt_C2SVPN,Group,APPDATATemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+303,DMZTemp,3389,3389,tcp,Mgt_C2SVPN,Group,DMZTemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+304,MGMTTemp,3389,3389,tcp,Mgt_C2SVPN,Group,MGMTTemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+305,APPDATATemp,3389,3389,udp,Mgt_C2SVPN,Group,APPDATATemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+306,DMZTemp,3389,3389,udp,Mgt_C2SVPN,Group,DMZTemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+307,MGMTTemp,3389,3389,udp,Mgt_C2SVPN,Group,MGMTTemp to connect via 3389 to Mgt_C2SVPN,Ingress,
+308,APPDATATemp,3389,3389,tcp,Mgt_S2SVPN,Group,APPDATATemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+309,DMZTemp,3389,3389,tcp,Mgt_S2SVPN,Group,DMZTemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+310,MGMTTemp,3389,3389,tcp,Mgt_S2SVPN,Group,MGMTTemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+311,APPDATATemp,3389,3389,udp,Mgt_S2SVPN,Group,APPDATATemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+312,DMZTemp,3389,3389,udp,Mgt_S2SVPN,Group,DMZTemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+313,MGMTTemp,3389,3389,udp,Mgt_S2SVPN,Group,MGMTTemp to connect via 3389 to Mgt_S2SVPN,Ingress,
+314,Mgt_EnterpriseALB-05,5601,5601,tcp,Mgt_Logstash,Group,Mgt_EnterpriseALB-05 to connect via 3389 to Mgt_Logstash,Ingress,
+315,APPDATATemp,5985,5986,tcp,Mgt_C2SVPN,Group,APPDATATemp to connect via 5985 to Mgt_C2SVPN,Ingress,
+316,DMZTemp,5985,5986,tcp,Mgt_C2SVPN,Group,DMZTemp to connect via 5985 to Mgt_C2SVPN,Ingress,
+317,MGMTTemp,5985,5986,tcp,Mgt_C2SVPN,Group,MGMTTemp to connect via 5985 to Mgt_C2SVPN,Ingress,
+318,APPDATATemp,5985,5986,tcp,Mgt_S2SVPN,Group,APPDATATemp to connect via 5985 to Mgt_S2SVPN,Ingress,
+319,DMZTemp,5985,5986,tcp,Mgt_S2SVPN,Group,DMZTemp to connect via 5985 to Mgt_S2SVPN,Ingress,
+320,MGMTTemp,5985,5986,tcp,Mgt_S2SVPN,Group,MGMTTemp to connect via 5985 to Mgt_S2SVPN,Ingress,
+611,Mgt_RDLic,0,65535,tcp,Mgt_RDSH,Group,Mgt_RDLic to connect via 0 to Mgt_RDSH,Ingress,
+612,dmz_AFTS,10021,10021,tcp,192.168.24.234/32,Group,192.168.24.234/32 to connect via 10021 to dmz_AFTS,Ingress,
+612,Mgt_Bindsvr,53,53,tcp,192.168.223.34/32,Group,192.168.223.34/32 to connect via Mgt_Bindsvr,Ingress,
+613,Mgt_Bindsvr,53,53,udp,192.168.223.34/32,Group,192.168.223.34/32 to connect via Mgt_Bindsvr,Ingress,
+614,Mgt_Bindsvr,53,53,tcp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via Mgt_Bindsvr,Ingress,
+615,Mgt_Bindsvr,53,53,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via Mgt_Bindsvr,Ingress,
+616,Mgt_Bindsvr,53,53,tcp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via Mgt_Bindsvr,Ingress,
+617,Mgt_Bindsvr,53,53,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via Mgt_Bindsvr,Ingress,
+618,Mgt_Bindsvr,53,53,tcp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via Mgt_Bindsvr,Ingress,
+619,Mgt_Bindsvr,53,53,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via Mgt_Bindsvr,Ingress,
+620,Mgt_Bindsvr,53,53,tcp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via Mgt_Bindsvr,Ingress,
+621,Mgt_Bindsvr,53,53,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via Mgt_Bindsvr,Ingress,
+622,Mgt_Bindsvr,53,53,tcp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via Mgt_Bindsvr,Ingress,
+623,Mgt_Bindsvr,53,53,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via Mgt_Bindsvr,Ingress,
+624,Mgt_Bindsvr,53,53,tcp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via Mgt_Bindsvr,Ingress,
+625,Mgt_Bindsvr,53,53,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via Mgt_Bindsvr,Ingress,
+626,Mgt_Bindsvr,53,53,tcp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via Mgt_Bindsvr,Ingress,
+627,Mgt_Bindsvr,53,53,udp,10.8.0.234/32,CIDR,10.8.0.234/32 to connect via Mgt_Bindsvr,Ingress,
+628,Mgt_Bindsvr,53,53,tcp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via Mgt_Bindsvr,Ingress,
+629,Mgt_Bindsvr,53,53,udp,10.8.0.243/32,CIDR,10.8.0.243/32 to connect via Mgt_Bindsvr,Ingress,
+630,Mgt_Bindsvr,53,53,tcp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via Mgt_Bindsvr,Ingress,
+631,Mgt_Bindsvr,53,53,udp,10.8.128.109/32,CIDR,10.8.128.109/32 to connect via Mgt_Bindsvr,Ingress,
+632,Mgt_Bindsvr,53,53,tcp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via Mgt_Bindsvr,Ingress,
+633,Mgt_Bindsvr,53,53,udp,10.8.128.108/32,CIDR,10.8.128.108/32 to connect via Mgt_Bindsvr,Ingress,
+634,Mgt_Bindsvr,53,53,tcp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via Mgt_Bindsvr,Ingress,
+635,Mgt_Bindsvr,53,53,udp,10.18.128.92/32,CIDR,10.18.128.92/32 to connect via Mgt_Bindsvr,Ingress,
+636,Mgt_Bindsvr,53,53,tcp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via Mgt_Bindsvr,Ingress,
+637,Mgt_Bindsvr,53,53,udp,10.10.100.64/32,CIDR,10.10.100.64/32 to connect via Mgt_Bindsvr,Ingress,
